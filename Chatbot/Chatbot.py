@@ -1,3 +1,9 @@
+'''
+Chatbot to 
+i)calculate addition,subtraction,multiplication and divition of n numbers
+ii)Give words defination and sysnonyms
+'''
+
 from random import randint
 from nltk.corpus import wordnet
 def greet_random():
@@ -33,5 +39,5 @@ while True:
         syns = wordnet.synsets(msg_sp[2])
         print(syns[0].lemmas()[0].name())
     elif "define" in msg:
-        syns = wordnet.synsets(msg_sp[2])
+        syns = wordnet.synsets(msg_sp[1])
         print(syns[0].definition())
